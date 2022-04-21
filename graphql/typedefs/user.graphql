@@ -1,0 +1,28 @@
+# Types
+type User implements Timestamps { 
+  id: ID!
+  name: String!
+  car: [Car]
+
+  # Interface required
+  createdAt: Date!
+  updatedAt: Date!
+}
+
+# Inputs
+input UserCreateInput {
+  id: number
+  first_name: String!
+  last_name: String!
+  email: String!
+  phone-number: number!
+
+}
+
+input UserUpdateInput {
+  id: number
+  first_name: String!
+  last_name: String!
+  email: String!
+  phone-number: number!
+}

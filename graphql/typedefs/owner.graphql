@@ -1,0 +1,19 @@
+# Types
+type Owner implements Timestamps { 
+  id: ID!
+  name: String!
+  user: [User]
+  
+  # Interface required
+  createdAt: Date!
+  updatedAt: Date!
+}
+
+# Inputs
+input OwnerCreateInput {
+  name: String!
+}
+
+input OwnerUpdateInput {
+  name: String
+}

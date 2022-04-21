@@ -1,0 +1,30 @@
+# Custom Scalars
+scalar Date
+
+type Query {
+  #Car
+  cars: [Car]!
+  car(id: ID!): Car
+
+  # Owner
+  owner: [Owner]!
+  owner(id: ID!): Owner
+
+  # user
+  user: [User]!
+  user(id: ID!): User
+}
+
+type Mutation {
+  # Cars
+  createCar(car: CarCreateInput!): Car!
+  updateCar(id: ID!, car: CarUpdateInput!): Car!
+
+  # Owners
+  createOwner(owner: OwnerCreateInput!): Owner!
+  updateOwner(id: ID!, owner: OwnerUpdateInput!): Owner!
+
+  # Users
+  creaeUser(user: UserCreateInput!): User!
+  updateUser(id: ID!, user: UserUpdateInput!): User!
+}

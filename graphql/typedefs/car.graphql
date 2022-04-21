@@ -1,0 +1,23 @@
+# Types
+type Car implements Timestamps { 
+  id: ID!
+  name: String!
+  author: Author!
+  
+  # Interface required
+  createdAt: Date!
+  updatedAt: Date!
+}
+
+# Inputs
+input CarCreateInput {
+ 
+  name: String!
+  Owner: ID!
+}
+
+input CarUpdateInput {
+  Brand: String
+  Model: String
+  Year: String
+}
